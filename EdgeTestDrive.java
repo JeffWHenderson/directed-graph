@@ -5,6 +5,7 @@ public class EdgeTestDrive{
     Edge ab5 = new Edge("A","B", 10);
 
     System.out.println("the edge is " + ab5.start.name + ab5.stop.name + ab5.distance);
+  }
 }
 
   //TODO: question: Can I instantiate Town instances when I create an edge... in Ruby psuedo => town.create(this.start) if Town.exist?

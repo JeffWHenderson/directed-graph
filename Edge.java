@@ -1,11 +1,11 @@
 public class Edge {
-  public Town start; // should these be private with getters and setters???
-  public Town stop;
+  public Node start; // should these be private with getters and setters???
+  public Node stop;
   public int distance;
 
   public Edge(String start, String stop, int distance) {
-    this.start = new Town(start);
-    this.stop = new Town(stop);
+    this.start = new Node(start);
+    this.stop = new Node(stop);
     this.distance = distance;
     /* this should work but will make a lot of duplicate towns
 
