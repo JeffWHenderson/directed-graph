@@ -1,4 +1,5 @@
 public class GraphTestDrive{
+  static Graph weightedGraph; // static cause its reg
   public static void main(String[] args){
 
       //AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
@@ -18,6 +19,7 @@ public class GraphTestDrive{
     Edge eb3 = new Edge(nodeE, nodeB, 3);
     Edge ae7 = new Edge(nodeA, nodeE, 7);
 
-    System.out.println("the edge is " + ae7.start.name + ae7.stop.name + ae7.distance);
+    weightedGraph = new Graph();
+    System.out.println("graphTestDrive");
   }
 }
