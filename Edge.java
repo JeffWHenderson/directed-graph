@@ -1,11 +1,27 @@
 public class Edge {
-  public String start; // should these be private with getters and setters???
-  public String stop;
+  public Town start; // should these be private with getters and setters???
+  public Town stop;
   public int distance;
 
   public Edge(String start, String stop, int distance) {
-    this.start = start;
-    this.stop = stop;
+    this.start = new Town(start);
+    this.stop = new Town(stop);
     this.distance = distance;
+    /* this should work but will make a lot of duplicates
+
+     what i need is a loop that asks
+      if this town exist already,
+        don't  create..
+        set this.start to thatTown
+      else
+        new Town(start) // or stop
+        this.start = start;
+      end
+        ^^^^UGLY AND WOULD HAVE BUGS
+
+      Maybe its better to create Towns seperately????
+
+      what would be best is to take whole graph string and create both the TownNode and the Edges off of that!!!!
+     */
   }
 }

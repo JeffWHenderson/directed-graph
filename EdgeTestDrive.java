@@ -5,7 +5,7 @@ public class EdgeTestDrive{
     // ab5.stop = "B";
     // ab5.distance = 5;
 
-    System.out.println("the edge is " + ab5.start + ab5.stop + ab5.distance);
+    System.out.println("the edge is " + ab5.start.name + ab5.stop.name + ab5.distance);
   }
 }
 
