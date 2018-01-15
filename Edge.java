@@ -3,9 +3,9 @@ public class Edge {
   public Node stop;
   public int distance;
 
-  public Edge(String start, String stop, int distance) {
-    this.start = new Node(start);
-    this.stop = new Node(stop);
+  public Edge(Node start, Node stop, int distance) {
+    this.start = start;
+    this.stop = stop;
     this.distance = distance;
     /* this should work but will make a lot of duplicate towns
 
