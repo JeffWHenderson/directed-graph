@@ -7,7 +7,7 @@ public class Edge {
     this.start = new Town(start);
     this.stop = new Town(stop);
     this.distance = distance;
-    /* this should work but will make a lot of duplicates
+    /* this should work but will make a lot of duplicate towns
 
      what i need is a loop that asks
       if this town exist already,
@@ -25,3 +25,5 @@ public class Edge {
      */
   }
 }
+
+// AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
