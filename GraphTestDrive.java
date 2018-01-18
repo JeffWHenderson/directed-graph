@@ -1,25 +1,90 @@
-public class GraphTestDrive{
-  static Graph weightedGraph; // static cause its reg
-  public static void main(String[] args){
+import java.util.ArrayList;
 
-      //AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
-    Node nodeA = new Node("A");
-    Node nodeB = new Node("B");
-    Node nodeC = new Node("C");
-    Node nodeD = new Node("D");
-    Node nodeE = new Node("E");
+public class GraphTestDrive {
 
-    Edge ab5 = new Edge(nodeA, nodeB, 5);
-    Edge bc4 = new Edge(nodeB, nodeC, 4);
-    Edge cd8 = new Edge(nodeC, nodeD, 8);
-    Edge dc8 = new Edge(nodeD, nodeC, 8);
-    Edge de6 = new Edge(nodeD, nodeE, 6);
-    Edge ad5 = new Edge(nodeA, nodeD, 5);
-    Edge ce2 = new Edge(nodeC, nodeE, 2);
-    Edge eb3 = new Edge(nodeE, nodeB, 3);
-    Edge ae7 = new Edge(nodeA, nodeE, 7);
 
-    weightedGraph = new Graph();
-    System.out.println("graphTestDrive");
-  }
+    public static void main(String[] args) {
+
+    	/////////////////// Before Test Setup ///////////////////////
+    	 Graph graph = new Graph();
+
+    	 Node a = new Node("A");        //	AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
+    	 Node b = new Node("B");
+    	 Node c = new Node("C");
+    	 Node d= new Node("D");
+    	 Node e= new Node("E");
+
+    		graph.addNode(a);
+    		graph.addNode(b);
+   		  graph.addNode(c);
+    		graph.addNode(d);
+    		graph.addNode(e);
+
+    		graph.addEdge(a, b, 5);
+    		graph.addEdge(b, c, 4);
+    		graph.addEdge(c, d, 8);
+    		graph.addEdge(d, c, 8);
+    		graph.addEdge(d, e, 6);
+    		graph.addEdge(a, d, 5);
+    		graph.addEdge(c, e, 2);
+    		graph.addEdge(e, b, 3);
+    		graph.addEdge(a, e, 7);
+
+
+    		///////////////////DISPLAY #1 - 5///////////////////////////////////
+	    		ArrayList<Node> routeABC = new ArrayList<Node>();
+	    		routeABC.add(a);  routeABC.add(b);  routeABC.add(c);
+	    		try {
+	    			System.out.println(  graph.getDistance(routeABC)  );
+	    		} catch (Exception x) {
+	    			//System.out.println(x.getMessage(), x);
+	    		}
+
+	    		ArrayList<Node> routeAD = new ArrayList<Node>();
+	    		routeAD.add(a);  routeAD.add(d);
+	    		try {
+	    			System.out.println(  graph.getDistance(routeAD)  );
+	    		} catch (Exception x) {
+	    			//System.out.println(x.getMessage(), x);
+	    		}
+
+	    		ArrayList<Node> routeADC = new ArrayList<Node>();
+	    		routeADC.add(a);  routeADC.add(d);  routeADC.add(c);
+	    		try {
+	    			System.out.println(  graph.getDistance(routeADC)  );
+	    		} catch (Exception x) {
+	    			//System.out.println(x.getMessage(), x);
+	    		}
+
+	    		ArrayList<Node> routeAEBCD= new ArrayList<Node>();
+	    		routeAEBCD.add(a);  routeAEBCD.add(e);  routeAEBCD.add(b); routeAEBCD.add(c);  routeAEBCD.add(d);
+	    		try {
+	    			System.out.println(  graph.getDistance(routeAEBCD)  );
+	    		} catch (Exception x) {
+	    			//System.out.println(x.getMessage(), x);
+	    		}
+
+	    		ArrayList<Node> routeAED = new ArrayList<Node>();
+	    		routeAED.add(a);  routeAED.add(e);  routeAED.add(d);
+	    		try {
+		    		System.out.println(  graph.getDistance(routeAED)  );
+	    		} catch (Exception x) {
+	    			System.out.println(x.getMessage());
+	    		}
+
+    		///////////////////////DISPLAY #6///////////////////////////////////
+        		System.out.println( graph.findRoutes(c, c, 3, 0) );
+
+       //////////////////////// DISPLAY #7//////////////////////////////////
+        		System.out.println( graph.findRouteWith_x_Stops(a, c, 4, 0) );
+
+      //////////////////////// DISPLAY #8///////////////////////////////////////
+        		System.out.println( graph.findShortestRoute(a, c) );
+
+       ////////////////////// DISPLAY #9 /////////////////////////////////////////
+        		System.out.println( graph.findShortestRoute(b, b) );
+
+      //////////////////////  DISPLAY #10/////////////////////////////////////////
+        		System.out.println( graph.numberOfRoutes(c, c, 30) );
+    }
 }
