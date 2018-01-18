@@ -165,7 +165,7 @@ private boolean hasCities(Node start, Node destination) {
 			for(Edge edge : edges) {
 				total += edge.getDistance();
 
-				if(total <= maximum) {
+				if(total < maximum) {
 					if(edge.getDestination().equals(destination)) {
 						routes++;
 						routes += getRoutes(edge.getDestination(), destination, total, maximum);
