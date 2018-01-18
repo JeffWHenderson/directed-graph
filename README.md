@@ -1,7 +1,7 @@
 # README
 
 ## Overview
-
+```
 Problem:  The local commuter railroad services a number of towns in Kiwiland.  Because of monetary concerns, all of the tracks are 'one-way.'  That is, a route from Kaitaia to Invercargill does not imply the existence of a route from Invercargill to Kaitaia.  In fact, even if both of these routes do happen to exist, they are distinct and are not necessarily the same distance!
 
 The purpose of this problem is to help the railroad provide its customers with information about the routes.  In particular, you will compute the distance along a certain route, the number of different routes between two towns, and the shortest route between two towns.
@@ -37,7 +37,7 @@ Output #5: NO SUCH ROUTE
 Output #6: 2
 Output #7: 3
 Output #8: 9
-
+```
 ## Installation
 
 This app requires java 9.0.1
@@ -48,6 +48,9 @@ additonal infor on java version
 *  Java(TM) SE Runtime Environment (build 9.0.1+11)
 *  Java HotSpot(TM) 64-Bit Server VM (build 9.0.1+11, mixed mode)
 
+optionally:
+find java development kit here: Install JDK8 https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
+if you prefer eclipse https://eclipse.org/downloads/
 
 Once you have Java 9.0.1 installed
 
