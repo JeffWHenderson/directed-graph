@@ -71,7 +71,7 @@ public class GraphTestDrive {
 	    		} catch (Exception x) {
 	    			System.out.println(x.getMessage());
 	    		}
-
+        		System.out.println( graph.numberOfRoutes(a, e, 14) );
     		///////////////////////DISPLAY #6///////////////////////////////////
         		System.out.println( graph.findRoutes(c, c, 3, 0) );
 

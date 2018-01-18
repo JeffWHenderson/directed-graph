@@ -158,25 +158,22 @@ private boolean hasCities(Node start, Node destination) {
 		return getRoutes(start, end, 0, maximum);
 	}
 
-	private int getRoutes(Node start, Node destination, int total, int maximum) {
+  private int getRoutes(Node start, Node destination, int total, int maximum) {
 		int routes = 0;
 		if(hasCities(start, destination)) {
 			Set<Edge> edges = this.vertices.get(start);
 			for(Edge edge : edges) {
-				total += edge.getDistance();
+				int distance = edge.getDistance();
 
-				if(total < maximum) {
+				if(total + distance < maximum) {
 					if(edge.getDestination().equals(destination)) {
 						routes++;
-						routes += getRoutes(edge.getDestination(), destination, total, maximum);
+						routes += getRoutes(edge.getDestination(), destination, total + distance, maximum);
 					}
 					else {
-						routes += getRoutes(edge.getDestination(), destination, total, maximum);
-						total -= edge.getDistance();
+						routes += getRoutes(edge.getDestination(), destination, total + distance, maximum);
 					}
 				}
-				else
-					total -= edge.getDistance();
 			}
 		}
 		return routes;
