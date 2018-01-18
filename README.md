@@ -21,13 +21,13 @@ Output: For test input 1 through 5, if no such route exists, output 'NO SUCH ROU
   9. The length of the shortest route (in terms of distance to travel) from B to B.
   10. The number of different routes from C to C with a distance of less than 30.  In the sample data, the trips are: CDC, CEBC, CEBCDC, CDCEBC, CDEBC, CEBCEBC, CEBCEBCEBC.
 
-##Test Input:
+## Test Input:
 
 For the test input, the towns are named using the first few letters of the alphabet from A to E.  A route between two towns (A to B) with a distance of 5 is represented as AB5.
 
 Graph: AB5, BC4, CD8, DC8, DE6, AD5, CE2, EB3, AE7
 
-##Expected Output:
+## Expected Output:
 
 Output #1: 9
 Output #2: 5
@@ -37,7 +37,6 @@ Output #5: NO SUCH ROUTE
 Output #6: 2
 Output #7: 3
 Output #8: 9
-
 
 ## Installation
 
@@ -52,11 +51,11 @@ additonal infor on java version
 
 Once you have Java 9.0.1 installed
 
-##for reviewing in text editor
-  
+## for reviewing in text editor
+
 * ```upload file sent to TW```
 
-##for reviewing in eclipse
+## for reviewing in eclipse
 
 * ```upload file sent to TW```
 
